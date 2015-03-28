@@ -1,0 +1,535 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* fatung_tax
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-20 06:37+0000\n"
+"PO-Revision-Date: 2015-03-20 14:40+0800\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. module: fatung_tax
+#: model:ir.actions.act_window,name:fatung_tax.action_fatunt_report
+msgid "Action Fatung Report"
+msgstr "税负表"
+
+#. module: fatung_tax
+#: model:ir.actions.act_window,name:fatung_tax.action_menu_fatung_invoice_line
+msgid "Action Invoice Line"
+msgstr "Action Invoice Line"
+
+#. module: fatung_tax
+#: field:fatung.invoice.line,amount:0 field:fatung.out.invoice.line,amount:0
+msgid "Amount"
+msgstr "总额"
+
+#. module: fatung_tax
+#: view:fatung.invoice:fatung_tax.fatung_tax_form_view
+msgid "Authorize"
+msgstr "认证"
+
+#. module: fatung_tax
+#: field:fatung.invoice,authorize_date:0
+msgid "Authorized Date"
+msgstr "认证日期"
+
+#. module: fatung_tax
+#: field:fatung.invoice,authorized_user:0
+msgid "Authorized User"
+msgstr "认证用户"
+
+#. module: fatung_tax
+#: selection:fatung.invoice,state:0
+msgid "Certified"
+msgstr "已认证"
+
+#. module: fatung_tax
+#: view:fatung.invoice:fatung_tax.fatung_tax_form_view
+#: view:fatung.out.invoice:fatung_tax.fatung_tax_out_form_view
+msgid "Certify"
+msgstr "认证"
+
+#. module: fatung_tax
+#: selection:fatung.invoice,state:0 selection:fatung.out.invoice,state:0
+msgid "Confirm"
+msgstr "确定"
+
+#. module: fatung_tax
+#: field:fatung.invoice,create_uid:0 field:fatung.invoice.line,create_uid:0
+#: field:fatung.out.invoice,create_uid:0
+#: field:fatung.out.invoice.line,create_uid:0 field:fatung.report,create_uid:0
+#: field:fatung.tax.type,create_uid:0
+msgid "Created by"
+msgstr "Created by"
+
+#. module: fatung_tax
+#: field:fatung.invoice,create_date:0 field:fatung.invoice.line,create_date:0
+#: field:fatung.out.invoice,create_date:0
+#: field:fatung.out.invoice.line,create_date:0
+#: field:fatung.report,create_date:0 field:fatung.tax.type,create_date:0
+msgid "Created on"
+msgstr "Created on"
+
+#. module: fatung_tax
+#: field:fatung.invoice,date:0 field:fatung.out.invoice,date:0
+msgid "Date"
+msgstr "日期"
+
+#. module: fatung_tax
+#: field:fatung.tax.type,dedution:0
+msgid "Dedution"
+msgstr "可抵扣否"
+
+#. module: fatung_tax
+#: field:fatung.tax.type,is_default:0
+msgid "Default"
+msgstr "是否默认"
+
+#. module: fatung_tax
+#: field:fatung.report,desc:0
+msgid "Desc"
+msgstr "说明"
+
+#. module: fatung_tax
+#: field:fatung.tax.type,desc:0
+msgid "Description"
+msgstr "说明"
+
+#. module: fatung_tax
+#: selection:fatung.invoice,state:0 selection:fatung.out.invoice,state:0
+msgid "Draft"
+msgstr "草稿"
+
+#. module: fatung_tax
+#: field:fatung.invoice.line,due_date:0
+#: field:fatung.out.invoice.line,due_date:0
+msgid "Due Date"
+msgstr "到期日期"
+
+#. module: fatung_tax
+#: field:fatung.invoice.line,f_invoice_id:0
+#: field:fatung.out.invoice.line,f_invoice_id:0
+msgid "F_Inovice"
+msgstr "F_Inovice"
+
+#. module: fatung_tax
+#: view:fatung.out.invoice:fatung_tax.fatung_tax_out_form_view
+msgid "Fatung Out Tax"
+msgstr "发票税额"
+
+#. module: fatung_tax
+#: view:fatung.report:fatung_tax.fatung_report_form_view
+#: view:fatung.report:fatung_tax.fatung_tax_tree_view
+#: model:ir.ui.menu,name:fatung_tax.fatung_report
+msgid "Fatung Report"
+msgstr "税负表"
+
+#. module: fatung_tax
+#: view:fatung.invoice:fatung_tax.fatung_tax_form_view
+#: view:fatung.invoice:fatung_tax.fatung_tax_tree
+#: view:fatung.out.invoice:fatung_tax.fatung_tax_out_tree
+#: model:ir.actions.act_window,name:fatung_tax.fatung_action_tax
+#: model:ir.ui.menu,name:fatung_tax.menu_fatung_tax_parent
+msgid "Fatung Tax"
+msgstr "税票"
+
+#. module: fatung_tax
+#: view:fatung.tax.type:fatung_tax.fatung_tax_type_form
+#: model:ir.ui.menu,name:fatung_tax.menu_fatung_tax_setting
+#: model:ir.ui.menu,name:fatung_tax.menu_fatung_tax_type
+msgid "Fatung Tax Type"
+msgstr "税票类型"
+
+#. module: fatung_tax
+#: field:fatung.invoice,id:0 field:fatung.invoice.line,id:0
+#: field:fatung.out.invoice,id:0 field:fatung.out.invoice.line,id:0
+#: field:fatung.report,id:0 field:fatung.tax.type,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: fatung_tax
+#: field:fatung.report,input_tax:0
+msgid "Input Tax"
+msgstr "进项税转出"
+
+#. module: fatung_tax
+#: field:fatung.invoice.line,invoice_id:0
+#: field:fatung.out.invoice.line,invoice_id:0
+#: model:ir.model,name:fatung_tax.model_account_invoice
+msgid "Invoice"
+msgstr "发票"
+
+#. module: fatung_tax
+#: field:fatung.invoice,invoice_amount:0
+#: field:fatung.out.invoice,invoice_amount:0
+msgid "Invoice Amount"
+msgstr "发票金额"
+
+#. module: fatung_tax
+#: field:fatung.invoice,invoice_author:0
+#: field:fatung.out.invoice,invoice_author:0
+msgid "Invoice Author"
+msgstr "开票人"
+
+#. module: fatung_tax
+#: field:fatung.invoice.line,invoice_date:0
+#: field:fatung.out.invoice.line,invoice_date:0
+msgid "Invoice Date"
+msgstr "发票日期"
+
+#. module: fatung_tax
+#: field:fatung.invoice.line,line_id:0 field:fatung.out.invoice.line,line_id:0
+#: model:ir.model,name:fatung_tax.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "发票明细"
+
+#. module: fatung_tax
+#: model:ir.ui.menu,name:fatung_tax.menu_fatung_tax_invoice_line
+msgid "Invoice Lines"
+msgstr "税票明细"
+
+#. module: fatung_tax
+#: field:fatung.invoice,invoice_no:0 field:fatung.out.invoice,invoice_no:0
+msgid "Invoice No"
+msgstr "税票号"
+
+#. module: fatung_tax
+#: code:addons/fatung_tax/fatung_tax.py:91
+#: code:addons/fatung_tax/fatung_tax.py:186
+#: code:addons/fatung_tax/fatung_tax.py:194
+#: code:addons/fatung_tax/fatung_tax.py:323
+#: code:addons/fatung_tax/fatung_tax.py:331
+#, python-format
+msgid "Invoice No duplicated!"
+msgstr "税票号重复！"
+
+#. module: fatung_tax
+#: field:fatung.out.invoice,invoice_tax:0
+msgid "Invoice Tax"
+msgstr "税票税额"
+
+#. module: fatung_tax
+#: code:addons/fatung_tax/fatung_tax.py:133
+#: code:addons/fatung_tax/fatung_tax.py:345
+#, python-format
+msgid "Invoice Tax does not equal to Related Tax!"
+msgstr "税票税额与关联税额不相等！"
+
+#. module: fatung_tax
+#: field:fatung.invoice,invoice_title:0
+#: field:fatung.out.invoice,invoice_title:0
+msgid "Invoice Title"
+msgstr "发票抬头"
+
+#. module: fatung_tax
+#: view:fatung.invoice:fatung_tax.fatung_tax_form_view
+#: view:fatung.out.invoice:fatung_tax.fatung_tax_out_form_view
+msgid "Invoices"
+msgstr "发票"
+
+#. module: fatung_tax
+#: field:fatung.invoice,write_uid:0 field:fatung.invoice.line,write_uid:0
+#: field:fatung.out.invoice,write_uid:0
+#: field:fatung.out.invoice.line,write_uid:0 field:fatung.report,write_uid:0
+#: field:fatung.tax.type,write_uid:0
+msgid "Last Updated by"
+msgstr "Last Updated by"
+
+#. module: fatung_tax
+#: field:fatung.invoice,write_date:0 field:fatung.invoice.line,write_date:0
+#: field:fatung.out.invoice,write_date:0
+#: field:fatung.out.invoice.line,write_date:0 field:fatung.report,write_date:0
+#: field:fatung.tax.type,write_date:0
+msgid "Last Updated on"
+msgstr "Last Updated on"
+
+#. module: fatung_tax
+#: field:fatung.invoice,invoice_line:0 field:fatung.out.invoice,invoice_line:0
+msgid "Line"
+msgstr "Line"
+
+#. module: fatung_tax
+#: view:fatung.invoice:fatung_tax.fatung_tax_form_view
+#: view:fatung.out.invoice:fatung_tax.fatung_tax_out_form_view
+msgid "Lines"
+msgstr "Lines"
+
+#. module: fatung_tax
+#: field:fatung.report,maintance_date:0
+msgid "Maintance Date"
+msgstr "维护日期"
+
+#. module: fatung_tax
+#: view:fatung.tax.type:fatung_tax.fatung_tax_type_form
+#: field:fatung.tax.type,name:0
+msgid "Name"
+msgstr "名称"
+
+#. module: fatung_tax
+#: field:fatung.tax.type,operator:0
+msgid "Operator"
+msgstr "维护人"
+
+#. module: fatung_tax
+#: field:fatung.invoice,op_type:0 field:fatung.out.invoice,op_type:0
+msgid "Operator Type"
+msgstr "操作类型"
+
+#. module: fatung_tax
+#: field:fatung.invoice.line,origin:0 field:fatung.out.invoice.line,origin:0
+msgid "Origin"
+msgstr "源"
+
+#. module: fatung_tax
+#: field:fatung.report,other_input:0
+msgid "Other Input"
+msgstr "其他进项"
+
+#. module: fatung_tax
+#: selection:fatung.out.invoice,state:0
+msgid "Paid"
+msgstr "已支付"
+
+#. module: fatung_tax
+#: selection:account.invoice,f_state:0
+msgid "Part"
+msgstr "部分"
+
+#. module: fatung_tax
+#: field:fatung.invoice,partner:0 field:fatung.invoice.line,partner:0
+#: field:fatung.out.invoice,partner:0 field:fatung.out.invoice.line,partner:0
+msgid "Partner"
+msgstr "合作伙伴"
+
+#. module: fatung_tax
+#: view:fatung.invoice:fatung_tax.fatung_tax_form_view
+msgid "Pay"
+msgstr "支付"
+
+#. module: fatung_tax
+#: view:fatung.invoice:fatung_tax.fatung_tax_form_view
+#: view:fatung.out.invoice:fatung_tax.fatung_tax_out_form_view
+msgid "Post"
+msgstr "提交"
+
+#. module: fatung_tax
+#: field:fatung.invoice.line,principal:0
+#: field:fatung.out.invoice.line,principal:0
+msgid "Principal"
+msgstr "负责人"
+
+#. module: fatung_tax
+#: field:fatung.invoice.line,product:0 field:fatung.out.invoice.line,product:0
+msgid "Product"
+msgstr "产品"
+
+#. module: fatung_tax
+#: field:fatung.invoice.line,quantity:0
+#: field:fatung.out.invoice.line,quantity:0
+msgid "Quantity"
+msgstr "数量"
+
+#. module: fatung_tax
+#: model:ir.actions.act_window,name:fatung_tax.action_fatung_tax
+#: model:ir.ui.menu,name:fatung_tax.menu_fatung_tax
+msgid "Receive Register"
+msgstr "收票"
+
+#. module: fatung_tax
+#: field:account.invoice.line,ref_no:0
+msgid "Ref No"
+msgstr "关联税票"
+
+#. module: fatung_tax
+#: field:fatung.invoice,voucher:0
+msgid "Ref Payments"
+msgstr "关联支付"
+
+#. module: fatung_tax
+#: field:fatung.invoice,reg_type:0 field:fatung.out.invoice,reg_type:0
+msgid "Register Type"
+msgstr "登记类型"
+
+#. module: fatung_tax
+#: field:fatung.invoice,register_user:0
+#: field:fatung.out.invoice,register_user:0
+msgid "Register User"
+msgstr "登记用户"
+
+#. module: fatung_tax
+#: view:fatung.out.invoice:fatung_tax.fatung_tax_out_form_view
+msgid "Regitster"
+msgstr "登记"
+
+#. module: fatung_tax
+#: field:account.invoice,f_state:0 selection:account.invoice,f_state:0
+#: view:fatung.invoice:fatung_tax.fatung_tax_search_view
+#: field:fatung.invoice,related_attribute:0
+#: selection:fatung.invoice,related_attribute:0
+#: field:fatung.out.invoice,related_attribute:0
+#: selection:fatung.out.invoice,related_attribute:0
+msgid "Related"
+msgstr "关联"
+
+#. module: fatung_tax
+#: field:account.invoice,f_related_amount:0
+#: field:fatung.invoice,related_amount:0
+#: field:fatung.out.invoice,related_amount:0
+msgid "Related Amount"
+msgstr "关联金额"
+
+#. module: fatung_tax
+#: view:fatung.invoice:fatung_tax.fatung_tax_form_view
+#: view:fatung.out.invoice:fatung_tax.fatung_tax_out_form_view
+msgid "Related Partners"
+msgstr "关联合作伙伴"
+
+#. module: fatung_tax
+#: field:fatung.invoice,related_tax:0 field:fatung.out.invoice,related_tax:0
+msgid "Related Tax"
+msgstr "关联税额"
+
+#. module: fatung_tax
+#: view:fatung.invoice:fatung_tax.fatung_tax_search_view
+msgid "Search Fatung Invoice"
+msgstr "Search Fatung Invoice"
+
+#. module: fatung_tax
+#: model:ir.actions.act_window,name:fatung_tax.action_fatung_tax_out
+#: model:ir.ui.menu,name:fatung_tax.menu_fatung_tax_out
+msgid "Send Register"
+msgstr "开票"
+
+#. module: fatung_tax
+#: field:fatung.out.invoice,state:0
+msgid "State"
+msgstr "状态"
+
+#. module: fatung_tax
+#: field:fatung.invoice,state:0
+msgid "Status"
+msgstr "状态"
+
+#. module: fatung_tax
+#: field:fatung.invoice,invoice_tax:0
+msgid "Tax Amount"
+msgstr "税票税额"
+
+#. module: fatung_tax
+#: field:fatung.invoice,invoice_type:0 field:fatung.out.invoice,invoice_type:0
+msgid "Tax Type"
+msgstr "税票类型"
+
+#. module: fatung_tax
+#: field:fatung.invoice.line,unit_price:0
+#: field:fatung.out.invoice.line,unit_price:0
+msgid "Unit Price"
+msgstr "单价"
+
+#. module: fatung_tax
+#: selection:account.invoice,f_state:0
+#: view:fatung.invoice:fatung_tax.fatung_tax_search_view
+#: selection:fatung.invoice,related_attribute:0
+#: selection:fatung.out.invoice,related_attribute:0
+msgid "Unrelated"
+msgstr "未关联"
+
+#. module: fatung_tax
+#: code:addons/fatung_tax/fatung_tax.py:130
+#: code:addons/fatung_tax/fatung_tax.py:342
+#, python-format
+msgid "Untaxed amount does not equal to Related Amount!"
+msgstr "未含税金额不等于关联税票金额！"
+
+#. module: fatung_tax
+#: field:fatung.tax.type,date:0
+msgid "Update DateTime"
+msgstr "Update DateTime"
+
+#. module: fatung_tax
+#: field:fatung.report,vat:0
+msgid "VAT"
+msgstr "其他销项"
+
+#. module: fatung_tax
+#: field:fatung.report,send_amount:0
+msgid "Out Amount"
+msgstr "开票金额"
+
+#. module: fatung_tax
+#: field:fatung.report,send_tax:0
+msgid "Out Tax"
+msgstr "开票税额"
+
+#. module: fatung_tax
+#: field:fatung.report,recieve_tax:0
+msgid "In Tax"
+msgstr "收票税额"
+
+#. module: fatung_tax
+#: field:fatung.report,certified_tax:0
+msgid "Certified Tax"
+msgstr "认证税额" 
+
+#. module: fatung_tax
+#: field:fatung.report,taxable:0
+msgid "Taxable Amount"
+msgstr "应纳税额"
+
+#. module: fatung_tax
+#: field:fatung.report,tax_bearing:0
+msgid "Tax Bearing"
+msgstr "税负率"
+
+#. module: fatung_tax
+#: field:fatung.tax.type,valid_days:0
+msgid "Valid Days"
+msgstr "有效天数"
+
+#. module: fatung_tax
+#: field:fatung.tax.type,validated:0
+msgid "Validated"
+msgstr "是否有效"
+
+#. module: fatung_tax
+#: code:addons/fatung_tax/fatung_tax.py:91
+#: code:addons/fatung_tax/fatung_tax.py:130
+#: code:addons/fatung_tax/fatung_tax.py:133
+#: code:addons/fatung_tax/fatung_tax.py:186
+#: code:addons/fatung_tax/fatung_tax.py:194
+#: code:addons/fatung_tax/fatung_tax.py:323
+#: code:addons/fatung_tax/fatung_tax.py:331
+#: code:addons/fatung_tax/fatung_tax.py:342
+#: code:addons/fatung_tax/fatung_tax.py:345
+#, python-format
+msgid "Warning"
+msgstr "警告"
+
+#. module: fatung_tax
+#: field:fatung.report,period:0
+msgid "period"
+msgstr "会计区间"
+
+#. module: fatung_tax
+#: selection:fatung.invoice,op_type:0
+msgid "receive"
+msgstr "接收"
+
+#. module: fatung_tax
+#: selection:fatung.out.invoice,op_type:0
+msgid "send"
+msgstr "开出"
+
+#. module: fatung_tax
+#: view:fatung.invoice:fatung_tax.fatung_tax_form_view
+#: view:fatung.out.invoice:fatung_tax.fatung_tax_out_form_view
+msgid "total"
+msgstr "总计"

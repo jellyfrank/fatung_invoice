@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data noupdate="1">
+		<!--account-->
+		<record model="account.account" id="fatung_account_intax">
+			<field name="name">Intax</field>
+			<field name="type">receivable</field>
+			<field name="user_type" eval="ref('account.conf_account_type_tax')" />
+			<field name="code">F1</field>
+		</record>
+
+		<record model="account.account" id="fatung_account_other">
+			<field name="name">Other Payable</field>
+			<field name="type">receivable</field>
+			<field name="user_type" eval="ref('account.conf_account_type_tax')" />
+			<field name="code">F2</field>
+		</record>
+
+		<record model="account.account" id="fatung_account_pay">
+			<field name="name">Payable</field>
+			<field name="type">payable</field>
+			<field name="user_type" eval="ref('account.conf_account_type_tax')" />
+			<field name="code">F3</field>
+		</record>
+
+		<!--Journal-->
+		<record model="account.journal" id="fatung_journal">
+			<field name="name">Fatung Tax</field>
+			<field name="code">fatung</field>
+			<field name="type">general</field>
+		</record>
+	</data>
+</openerp>

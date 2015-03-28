@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<record model="ir.ui.view" id="fatung_tax_type_form">
+			<field name="name">Fatung Tax Type Form</field>
+			<field name="model">fatung.tax.type</field>
+			<field name="view_type">form</field>
+			<field name="arch" type="xml">
+				<form string="Fatung Tax Type">					
+					<sheet>
+						<label for="name" string="Name"/>
+						<h1>
+							<field name="name"/>
+						</h1>
+						<group>
+							<group>
+								<field name="dedution"/>
+								<field name="valid_days"/>
+							</group>
+							<group>
+								<field name="validated"/>
+								<field name="is_default"/>
+								<field name="date"/>
+								<field name="operator"/>
+							</group>
+							<group>
+								<field name="desc"/>
+							</group>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="fatung_tax_type_tree">
+			<field name="name">Fatung Tax Type Tree</field>
+			<field name="model">fatung.tax.type</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="name"/>
+					<field name="valid_days"/>
+					<field name="desc"/>
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="fatung_action_tax">
+			<field name="name">Fatung Tax</field>
+			<field name="res_model">fatung.tax.type</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem id="menu_fatung_tax_setting" name="Fatung Tax Type" parent="account.menu_finance_configuration"/>
+
+		<menuitem id="menu_fatung_tax_type" name="Fatung Tax Type" action="fatung_action_tax" parent="menu_fatung_tax_setting"/>
+
+		<record model="ir.ui.view" id="fatung_tax_form_view">
+			<field name="name">Receive Register</field>
+			<field name="model">fatung.invoice</field>
+			<field name="arch" type="xml">
+				<form string="Fatung Tax">
+					<header>
+						<button name="btn_post" string="Post" type="object" class="oe_highlight" states="draft"/>
+						<button name="btn_cer" string="Certify" type="object" class="oe_highlight" states="confirm"/>
+						<field name="state" widget="statusbar"/>
+					</header>
+					<sheet>						
+						<label for="invoice_no" string="No"/>
+						<h1>
+							<field name="invoice_no"/>
+						</h1>
+						<group>
+							<group>
+								<field name="invoice_type"/>
+								<field name="invoice_title"/>
+								<field name="reg_type"/>
+								<field name="op_type"/>
+							</group>	
+							<group>
+								<field name="date"/>
+								<field name="invoice_author"/>
+								<field name="invoice_amount" attrs="{'readonly':[('related_attribute','=','related')]}"/>
+								<field name="invoice_tax" attrs="{'readonly':[('related_attribute','=','related')]}"/>
+							</group>
+							<group>								
+								<field name="related_attribute"/>
+								<field name="voucher" attrs="{'invisible':[('related_attribute','=','related')]}"/>
+							</group>
+						</group>
+						<notebook>							
+							<page string="Authorize">													
+								<group>							
+									<field name="authorize_date"/>
+									<field name="authorized_user"/>
+									<field name="register_user" />
+								</group>
+							</page>
+							<page string="Related Partners" attrs="{'invisible':[('related_attribute','!=','related')]}">
+								<group>
+									<field name="partner" attrs="{'required':[('related_attribute','=','related')]}"/>
+									<field name="related_amount"/>
+									<field name="related_tax"/>
+								</group>
+								<group>
+									<group>
+										<field name="invoice_tax"/>
+									</group>
+									<group>
+										<div>
+											<button class="oe_inline oe_stat_button oe_right" name="btn_inv" string="Invoices" type="object" attrs="{'invisible':[('state','!=','draft')]}" icon="fa-pencil-square-o" widget="statinfo"/>
+										</div>
+								</group>
+								</group>
+								<div>
+									<field name="invoice_line">
+										<tree string="Lines" editable="bottom">
+											<field name="invoice_id"/>
+											<field name="partner"/>
+											<field name="product"/>
+											<field name="quantity"/>
+											<field name="unit_price"/>
+											<field name="invoice_date"/>
+											<field name="origin"/>
+											<field name="due_date"/>
+											<field name="principal"/>
+											<field name="amount" sum="total"/>
+											<field name="related_amount" sum="total"/>
+										</tree>
+									</field>
+								</div>
+							</page>
+						</notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="fatung_tax_tree">
+			<field name="name">Receive Register</field>
+			<field name="model">fatung.invoice</field>
+			<field name="arch" type="xml">
+				<tree string="Fatung Tax">
+					<field name="invoice_no"/>
+					<field name="invoice_title"/>
+					<field name="invoice_amount"/>
+					<field name="invoice_tax"/>
+					<field name="state"/>
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_fatung_tax">
+			<field name="name">Receive Register</field>
+			<field name="res_model">fatung.invoice</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<record model="ir.ui.view" id="fatung_tax_search_view">
+			<field name="name">Fatung Search View</field>
+			<field name="model">fatung.invoice</field>
+			<field name="arch" type="xml">
+				<search string="Search Fatung Invoice">
+					<filter name="related_attribute" string="Related" domain="[('related_attribute','=','related')]"/>
+					<filter name="related_attribute" string="Unrelated" domain="[('related_attribute','=','unrelated')]"/>
+				</search>
+			</field>
+		</record>
+
+		<menuitem id="menu_fatung_tax_parent" name="Fatung Tax" parent="account.menu_finance" />
+		<menuitem id="menu_fatung_tax" name="Receive Register" action="action_fatung_tax" parent="menu_fatung_tax_parent"/>
+
+		<record model="ir.ui.view" id="fatung_invoice_line_form_view">
+			<field name="name">fatung invoice line</field>
+			<field name="model">account.invoice</field>
+			<field name="inherit_id" ref="account.invoice_supplier_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//page[@string='Invoice']/field/tree/field[@name='price_subtotal']" position="after">
+					<field name="ref_no"/>
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_menu_fatung_invoice_line">
+			<field name="name">View Invoice Line</field>
+			<field name="res_model">account.invoice.line</field>
+			<field name="view_mode">tree</field>
+		</record>
+
+		<menuitem id="menu_fatung_tax_invoice_line" name="Invoice Lines" action="action_menu_fatung_invoice_line" parent="menu_fatung_tax_parent"/>
+
+		<record model="ir.ui.view" id="fatung_invoice_line_tree_view">
+			<field name="name">Fatung Invoice Line Form</field>
+			<field name="model">account.invoice.line</field>
+			<field name="inherit_id" ref="account.view_invoice_line_tree"/>
+			<field name="arch" type="xml">
+				<field name="price_subtotal" position="after">
+					<field name="ref_no"/>
+					<field name="uamount"/>
+				</field>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="fatung_invoice_line_search_view">
+			<field name="name">Fatung Invoice Line Search</field>
+			<field name="model">account.invoice.line</field>
+			<field name="arch" type="xml">
+				<search string="Fatung Invoice Search">
+					<filter string="Related Invoice" name="related" domain="[('ref_no','!=',False)]" />
+					<filter string="Unrelated Invoice" name="unrelated" domain="[('ref_no','=',False)]"/>
+				</search>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="fatung_report_form_view">
+			<field name="name">Fatung Report</field>
+			<field name="model">fatung.report</field>
+			<field name="arch" type="xml">
+				<form string="Fatung Report">
+					<sheet>
+						<h1>
+							<field name="period"/>
+						</h1>
+						<group>
+							<group>
+								<field name="send_amount"/>
+								<field name="send_tax"/>
+							</group>
+							<group>
+								<field name="recieve_tax"/>
+								<field name="certified_tax"/>
+							</group>
+							<group>
+								<field name="vat"/>
+								<field name="input_tax"/>
+							</group>
+							<group>
+								<field name="other_input"/>
+							</group>
+							<group>
+								<field name="taxable"/>
+								<field name="tax_bearing"/>
+							</group>
+						</group>
+						
+						<group>
+							<field name="desc"/>
+							<field name="maintance_date"/>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="fatung_tax_tree_view">
+			<field name="name">Fatung Tax Tree</field>
+			<field name="model">fatung.report</field>
+			<field name="arch" type="xml">
+				<tree string="Fatung Report">
+					<field name="period"/>
+					<field name="send_amount"/>
+					<field name="send_tax"/>
+					<field name="recieve_tax"/>
+					<field name="certified_tax"/>
+					<field name="vat"/>
+					<field name="input_tax"/>
+					<field name="other_input"/>
+					<field name="taxable"/>
+					<field name="tax_bearing"/>
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_fatunt_report">
+			<field name="name">Action Fatung Report</field>
+			<field name="res_model">fatung.report</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem id="fatung_report" name="Fatung Report" action='action_fatunt_report' parent="menu_fatung_tax_parent"/>
+	</data>
+</openerp>
